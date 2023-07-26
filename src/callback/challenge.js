@@ -30,7 +30,7 @@ fetchData(`${API}/products`, (error1, data1) => {
     fetchData(`${API}/products/${data1[0].id}`, (error2, data2) => {
         if (error2) return console.log(error2);
         // Se hace uso del Optional Chaining (ES11) para detener la evaluación del objeto si retorna undefined en algún momento
-        fetchData(`${API}/products/${data2?.category?.id}`, (error3, data3) => {
+        fetchData(`${API}/categories/${data2?.category?.id}`, (error3, data3) => {
             if (error3) return console.log(error3);
             console.log(data1[0]);
             console.log(data2.title);
