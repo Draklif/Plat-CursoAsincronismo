@@ -1,0 +1,15 @@
+{
+  "name": "plat-cursoasincronismo",
+  "version": "1.0.0",
+  "description": "Curso de Platzi de Asincronismo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "async"
+  ],
+  "author": "Jose <josemanrenteria@gmail.com>",
+  "license": "MIT"
+}
