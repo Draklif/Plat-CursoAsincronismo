@@ -17,8 +17,7 @@ function fetchData(url, cb) {
             if (xhr.status === 200) {
                 cb(null, JSON.parse(xhr.responseText))
             } else {
-                const err = new Error(`Error ${url}`)
-                return cb(err, null)
+                return cb(new Error(`Error ${url}`), null)
             }
         } 
     }
@@ -29,7 +28,6 @@ fetchData(`${API}/products`, (error1, data1) => {
     if (error1) return console.log(error1);
     fetchData(`${API}/products/${data1[0].id}`, (error2, data2) => {
         if (error2) return console.log(error2);
-        // Se hace uso del Optional Chaining (ES11) para detener la evaluación del objeto si retorna undefined en algún momento
         fetchData(`${API}/categories/${data2?.category?.id}`, (error3, data3) => {
             if (error3) return console.log(error3);
             console.log(data1[0]);

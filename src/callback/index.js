@@ -24,6 +24,11 @@ function calculate(num1, num2, cb) {
 // NO se le envian los parámetros a esta función ni se le ponen los paréntesis porque no se está invocando, solo se envía
 console.log(calculate(10, 15, sum)) // Imprime 25 (10 + 15)
 
+// Lo mismo pero definiendo la función como flecha
+console.log(calculate(10, 15, (num1, num2) => {
+    return num1 + num2
+})) // Imprime 25 (10 + 15)
+
 // Más ejemplos
 console.log(calculate(10, 5, sub)) // Imprime 5 (10 - 5)
 console.log(calculate(10, 5, mul)) // Imprime 50 (10 * 5)
