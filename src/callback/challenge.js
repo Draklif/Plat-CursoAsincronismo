@@ -36,3 +36,23 @@ fetchData(`${API}/products`, (error1, data1) => {
         })
     })
 })
+
+// Lo que está arriba con callbacks, funciona parecido a la siguiente
+// function fn1 (error1, data1) {
+//     if (error1) return console.log(error1);
+//     fetchData(`${API}/products/${data1[0].id}`, fn2)
+// }
+
+// function fn2 (error2, data2) {
+//     if (error2) return console.log(error2);
+//     fetchData(`${API}/categories/${data2?.category?.id}`, fn3)
+// }
+
+// function fn3 (error3, data3) {
+//     if (error3) return console.log(error3);
+//     console.log(data1[0]); // Aqui ocurriría error porque no tenemos acceso a data1
+//     console.log(data2.title); // Aqui ocurriría error porque no tenemos acceso a data2
+//     console.log(data3.name);
+// }
+
+// fetchData(`${API}/products`, fn1)
