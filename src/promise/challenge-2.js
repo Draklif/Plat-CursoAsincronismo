@@ -1,3 +1,5 @@
+//import fetch from 'node-fetch'
+
 const API = 'https://api.escuelajs.co/api/v1'
 
 // El pequeño cambio se agrega acá para que se transforme directamente todo lo recibido en la petición a formato JSON
